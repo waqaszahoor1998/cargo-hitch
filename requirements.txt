@@ -1,0 +1,13 @@
+# Cargo Hitchhiking Simulation Requirements
+# These are the Python packages needed to run the simulation
+
+# Core Python libraries (usually included with Python)
+# No external packages required for basic functionality
+
+# Optional packages for enhanced functionality:
+python-docx>=0.8.11  # For reading DOCX documentation files
+pandas>=1.3.0        # For data analysis (optional)
+openpyxl>=3.0.0      # For reading Excel files (optional)
+
+# Note: The simulation works with just Python standard library
+# The above packages are only needed if you want to analyze documentation files

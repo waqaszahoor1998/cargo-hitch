@@ -1,0 +1,149 @@
+{
+  "extraction_timestamp": "2025-09-04T05:30:35.355972",
+  "customer_survey_data": {
+    "total_responses": 131,
+    "columns": [
+      "Timestamp",
+      "1. Age:",
+      "2. Gender:",
+      "3. City",
+      "4. I prefer same-day delivery for most orders.",
+      "5. I am willing to pay extra for express/same-day delivery.",
+      "6. Changing delivery cut-off times during peak seasons is acceptable.",
+      "7. Preferred delivery time slot:",
+      "8. I accept higher delivery charges beyond a 14 km radius",
+      "9. Open-box delivery (checking items before accepting) is important to me.",
+      "10. The availability of prepaid return options influences my decision to order.",
+      "11. What do you usually order online?",
+      "12. Your average order value (PKR):",
+      "13. Overall, how satisfied are you with delivery services, after you order anything online?",
+      "14. On a scale of 0–10, how likely are you to recommend the service of online orders to others?\n(0 = Not at all likely, 10 = Extremely likely)",
+      "15. After placing any order, will you reorder from the specific service in the next month?"
+    ],
+    "sample_data": [
+      {
+        "Timestamp": "2025-08-30 14:14:31.080000",
+        "1. Age:": "18–24",
+        "2. Gender:": "Female",
+        "3. City": "Islamabad",
+        "4. I prefer same-day delivery for most orders.": "Neutral",
+        "5. I am willing to pay extra for express/same-day delivery.": "Strongly disagree",
+        "6. Changing delivery cut-off times during peak seasons is acceptable.": "Agree",
+        "7. Preferred delivery time slot:": "4 PM – 7 PM",
+        "8. I accept higher delivery charges beyond a 14 km radius": "Disagree",
+        "9. Open-box delivery (checking items before accepting) is important to me.": "Strongly Agree",
+        "10. The availability of prepaid return options influences my decision to order.": "Agree",
+        "11. What do you usually order online?": "Non-food (electronics, home items, clothing, etc.)",
+        "12. Your average order value (PKR):": "1500–2999",
+        "13. Overall, how satisfied are you with delivery services, after you order anything online?": "Satisfied",
+        "14. On a scale of 0–10, how likely are you to recommend the service of online orders to others?\n(0 = Not at all likely, 10 = Extremely likely)": 8.0,
+        "15. After placing any order, will you reorder from the specific service in the next month?": "Yes"
+      },
+      {
+        "Timestamp": "2025-08-30 15:21:28.073000",
+        "1. Age:": "18–24",
+        "2. Gender:": "Female",
+        "3. City": "Islamabad",
+        "4. I prefer same-day delivery for most orders.": "Agree",
+        "5. I am willing to pay extra for express/same-day delivery.": "Neutral",
+        "6. Changing delivery cut-off times during peak seasons is acceptable.": "Neutral",
+        "7. Preferred delivery time slot:": "1 PM – 4 PM",
+        "8. I accept higher delivery charges beyond a 14 km radius": "Neutral",
+        "9. Open-box delivery (checking items before accepting) is important to me.": "Strongly Agree",
+        "10. The availability of prepaid return options influences my decision to order.": "Agree",
+        "11. What do you usually order online?": "Non-food (electronics, home items, clothing, etc.)",
+        "12. Your average order value (PKR):": "3000–4999",
+        "13. Overall, how satisfied are you with delivery services, after you order anything online?": "Neutral",
+        "14. On a scale of 0–10, how likely are you to recommend the service of online orders to others?\n(0 = Not at all likely, 10 = Extremely likely)": 3.0,
+        "15. After placing any order, will you reorder from the specific service in the next month?": "Yes"
+      },
+      {
+        "Timestamp": "2025-08-30 15:44:45.504000",
+        "1. Age:": "18–24",
+        "2. Gender:": "Female",
+        "3. City": "Islamabad",
+        "4. I prefer same-day delivery for most orders.": "Agree",
+        "5. I am willing to pay extra for express/same-day delivery.": "Disagree",
+        "6. Changing delivery cut-off times during peak seasons is acceptable.": "Disagree",
+        "7. Preferred delivery time slot:": "4 PM – 7 PM",
+        "8. I accept higher delivery charges beyond a 14 km radius": "Disagree",
+        "9. Open-box delivery (checking items before accepting) is important to me.": "Agree",
+        "10. The availability of prepaid return options influences my decision to order.": "Agree",
+        "11. What do you usually order online?": "Non-food (electronics, home items, clothing, etc.)",
+        "12. Your average order value (PKR):": "3000–4999",
+        "13. Overall, how satisfied are you with delivery services, after you order anything online?": "Neutral",
+        "14. On a scale of 0–10, how likely are you to recommend the service of online orders to others?\n(0 = Not at all likely, 10 = Extremely likely)": 6.0,
+        "15. After placing any order, will you reorder from the specific service in the next month?": "Yes"
+      }
+    ],
+    "satisfaction_analysis": {
+      "Very satisfied": 74,
+      "Neutral": 38,
+      "Satisfied": 18,
+      "Dissatisfied": 1
+    },
+    "nps_analysis": {
+      "10.0": 71,
+      "8.0": 11,
+      "7.0": 11,
+      "5.0": 10,
+      "6.0": 9,
+      "9.0": 8,
+      "4.0": 5,
+      "3.0": 3,
+      "1.0": 1,
+      "2.0": 1
+    },
+    "order_preferences": {
+      "4. I prefer same-day delivery for most orders.": {
+        "Agree": 96,
+        "Neutral": 19,
+        "Strongly agree": 14,
+        "Disagree": 2
+      },
+      "10. The availability of prepaid return options influences my decision to order.": {
+        "Agree": 97,
+        "Neutral": 19,
+        "Strongly agree": 10,
+        "Strongly disagree": 3,
+        "Disagree": 2
+      },
+      "11. What do you usually order online?": {
+        "Food (fresh, chilled, or frozen)": 57,
+        "Food (fresh, chilled, or frozen), Non-food (electronics, home items, clothing, etc.)": 42,
+        "Non-food (electronics, home items, clothing, etc.)": 32
+      },
+      "12. Your average order value (PKR):": {
+        "3000–4999": 41,
+        "5000-10000": 29,
+        "1500–2999": 20,
+        "10000-25000": 16,
+        "25000-45000": 12,
+        "45000+": 8,
+        "< 1500": 5
+      },
+      "13. Overall, how satisfied are you with delivery services, after you order anything online?": {
+        "Very satisfied": 74,
+        "Neutral": 38,
+        "Satisfied": 18,
+        "Dissatisfied": 1
+      },
+      "14. On a scale of 0–10, how likely are you to recommend the service of online orders to others?\n(0 = Not at all likely, 10 = Extremely likely)": {
+        "10.0": 71,
+        "8.0": 11,
+        "7.0": 11,
+        "5.0": 10,
+        "6.0": 9,
+        "9.0": 8,
+        "4.0": 5,
+        "3.0": 3,
+        "1.0": 1,
+        "2.0": 1
+      },
+      "15. After placing any order, will you reorder from the specific service in the next month?": {
+        "Yes": 127,
+        "No": 4
+      }
+    },
+    "delivery_preferences": {
+      "Timestamp": {
