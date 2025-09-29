@@ -1351,10 +1351,10 @@ def run_hybrid_metro_yango_simulation():
     print(f"\nDELIVERY EFFICIENCY:")
     print(f"   • Metro Success Rate: {metro_orders/total_orders:.1%}")
     print(f"   • Yango Success Rate: {yango_orders/total_orders:.1%}")
-    print(f"   • Overall Success Rate: {actual_success_rate:.1%}")
+    print(f"   • Overall Success Rate: {success_rate:.1%}")
     print(f"   • Total Distance Covered: {yango_orders * avg_distance_km + metro_orders * 5:.0f}km")
     print(f"   • Packages Delivered: {metro_orders + yango_orders}")
-    print(f"   • Hybrid Advantage: +{((metro_orders + yango_orders) - actual_matched_orders):.0f} additional deliveries")
+    print(f"   • Hybrid Advantage: +{((metro_orders + yango_orders) - matched_orders):.0f} additional deliveries")
     
     return results, hybrid_config
 
