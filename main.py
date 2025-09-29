@@ -376,7 +376,7 @@ def run_metro_real_geographical_simulation():
         'delivery_areas': REAL_DELIVERY_AREAS
     }
     
-    print(f"\n🚚 SIMULATION PARAMETERS:")
+    print(f"\n  SIMULATION PARAMETERS:")
     print(f"   • Total Orders: {real_geo_config['total_orders']}")
     print(f"   • Total Drivers: {real_geo_config['total_drivers']}")
     print(f"   • Max Detour: {real_geo_config['max_detour_km']}km")
@@ -393,7 +393,7 @@ def run_metro_real_geographical_simulation():
     # Get results
     results = simulation.get_results()
     
-    print(f"\n📊 REAL GEOGRAPHICAL SIMULATION RESULTS")
+    print(f"\n  REAL GEOGRAPHICAL SIMULATION RESULTS")
     print("-" * 60)
     print(f"Total Orders: {results['orders']}")
     print(f"Successfully Matched: {results['matched_orders']}")
@@ -405,7 +405,7 @@ def run_metro_real_geographical_simulation():
     # Display KPI summary if available
     if 'kpi_summary' in results and results['kpi_summary']:
         kpi = results['kpi_summary']
-        print(f"\n💰 FINANCIAL SUMMARY:")
+        print(f"\n  FINANCIAL SUMMARY:")
         if isinstance(kpi, dict):
             print(f"   Total Revenue: Rs {kpi.get('total_revenue', 0):,.0f}")
             print(f"   Average Delivery Cost: Rs {kpi.get('average_delivery_cost', 0):.0f}")
@@ -414,7 +414,7 @@ def run_metro_real_geographical_simulation():
             print(f"   KPI Summary: {kpi}")
     
     # Compare with original simulation
-    print(f"\n📈 COMPARISON WITH ORIGINAL SIMULATION:")
+    print(f"\n  COMPARISON WITH ORIGINAL SIMULATION:")
     print("-" * 60)
     original_success_rate = 0.175  # 17.5% from original simulation
     real_geo_success_rate = success_rate
@@ -425,11 +425,11 @@ def run_metro_real_geographical_simulation():
     print(f"Improvement: +{improvement:.1%} ({improvement/original_success_rate*100:.0f}% increase)")
     
     if real_geo_success_rate > 0.3:
-        print("✅ EXCELLENT: Real geographical data significantly improves success rate!")
+        print("  EXCELLENT: Real geographical data significantly improves success rate!")
     elif real_geo_success_rate > 0.25:
-        print("✅ GOOD: Real geographical data improves success rate")
+        print("  GOOD: Real geographical data improves success rate")
     else:
-        print("⚠️  Still needs optimization: Consider adding more drivers or relaxing constraints")
+        print("⚠   Still needs optimization: Consider adding more drivers or relaxing constraints")
     
     return results
 
@@ -444,7 +444,7 @@ def run_comprehensive_real_data_simulation():
     - Real customer preferences and behavior patterns
     """
     print("=" * 80)
-    print("🌟 COMPREHENSIVE REAL DATA SIMULATION")
+    print("  COMPREHENSIVE REAL DATA SIMULATION")
     print("=" * 80)
     print("Using ALL real data from Excel and DOCX files:")
     print("• 131 customer survey responses")
@@ -465,7 +465,7 @@ def run_comprehensive_real_data_simulation():
         get_bus_stop_for_driver, generate_location_in_area
     )
     
-    print(f"\n📊 REAL DATA SOURCES:")
+    print(f"\n  REAL DATA SOURCES:")
     print(f"   • Customer Survey: {REAL_CUSTOMER_DATA['total_responses']} responses")
     print(f"   • Customer Satisfaction: {REAL_CUSTOMER_DATA['customer_satisfaction_rate']:.1%}")
     print(f"   • NPS Score: {REAL_CUSTOMER_DATA['nps_score']:.1f}")
@@ -507,7 +507,7 @@ def run_comprehensive_real_data_simulation():
     # Get results
     results = simulation.get_results()
     
-    print(f"\n📊 COMPREHENSIVE REAL DATA SIMULATION RESULTS")
+    print(f"\n  COMPREHENSIVE REAL DATA SIMULATION RESULTS")
     print("-" * 70)
     print(f"Total Orders: {results['orders']}")
     print(f"Successfully Matched: {results['matched_orders']}")
@@ -519,7 +519,7 @@ def run_comprehensive_real_data_simulation():
     # Display KPI summary if available
     if 'kpi_summary' in results and results['kpi_summary']:
         kpi = results['kpi_summary']
-        print(f"\n💰 FINANCIAL SUMMARY:")
+        print(f"\n  FINANCIAL SUMMARY:")
         if isinstance(kpi, dict):
             print(f"   Total Revenue: Rs {kpi.get('total_revenue', 0):,.0f}")
             print(f"   Average Delivery Cost: Rs {kpi.get('average_delivery_cost', 0):.0f}")
@@ -528,7 +528,7 @@ def run_comprehensive_real_data_simulation():
             print(f"   KPI Summary: {kpi}")
     
     # Compare with targets from real data
-    print(f"\n🎯 COMPARISON WITH REAL DATA TARGETS:")
+    print(f"\n  COMPARISON WITH REAL DATA TARGETS:")
     print("-" * 70)
     print(f"Customer Satisfaction:")
     print(f"   • Target (from survey): {REAL_CUSTOMER_DATA['customer_satisfaction_rate']:.1%}")
@@ -547,23 +547,23 @@ def run_comprehensive_real_data_simulation():
     print(f"   • Mixed Orders: {REAL_CUSTOMER_DATA['order_behavior']['mixed_orders']:.1%}")
     
     # Performance analysis
-    print(f"\n📈 PERFORMANCE ANALYSIS:")
+    print(f"\n  PERFORMANCE ANALYSIS:")
     print("-" * 70)
     if success_rate > 0.3:
-        print("✅ EXCELLENT: High success rate indicates strong feasibility with real data!")
+        print("  EXCELLENT: High success rate indicates strong feasibility with real data!")
     elif success_rate > 0.25:
-        print("✅ GOOD: Moderate success rate shows potential with real data")
+        print("  GOOD: Moderate success rate shows potential with real data")
     elif success_rate > 0.2:
-        print("✅ FAIR: Success rate shows room for improvement")
+        print("  FAIR: Success rate shows room for improvement")
     else:
-        print("⚠️  NEEDS IMPROVEMENT: Low success rate requires optimization")
+        print("⚠   NEEDS IMPROVEMENT: Low success rate requires optimization")
     
-    print(f"\n🌟 REAL DATA INTEGRATION SUCCESS:")
-    print(f"   • Customer survey data: ✅ Integrated")
-    print(f"   • Metro operational data: ✅ Integrated")
-    print(f"   • Real geographical data: ✅ Integrated")
-    print(f"   • Customer preferences: ✅ Integrated")
-    print(f"   • Order behavior patterns: ✅ Integrated")
+    print(f"\n  REAL DATA INTEGRATION SUCCESS:")
+    print(f"   • Customer survey data:   Integrated")
+    print(f"   • Metro operational data:   Integrated")
+    print(f"   • Real geographical data:   Integrated")
+    print(f"   • Customer preferences:   Integrated")
+    print(f"   • Order behavior patterns:   Integrated")
     
     return results
 
@@ -573,7 +573,7 @@ def run_clean_comprehensive_simulation():
     Displays everything in one organized, easy-to-read format.
     """
     print("\n" + "=" * 80)
-    print("🌟 CARGO HITCHHIKING SIMULATION - COMPREHENSIVE RESULTS")
+    print("  CARGO HITCHHIKING SIMULATION - COMPREHENSIVE RESULTS")
     print("=" * 80)
     
     # Import all real data
@@ -621,60 +621,60 @@ def run_clean_comprehensive_simulation():
         avg_delivery_cost = kpi_data.get('average_delivery_cost', 0)
     
     # DISPLAY COMPREHENSIVE RESULTS
-    print("\n📊 SIMULATION RESULTS")
+    print("\n  SIMULATION RESULTS")
     print("-" * 50)
-    print(f"📦 Orders Processed: {results['orders']:,}")
-    print(f"✅ Successfully Delivered: {results['matched_orders']:,}")
-    print(f"📈 Success Rate: {success_rate:.1%}")
-    print(f"⏱️  Execution Time: {execution_time:.1f} seconds")
+    print(f"  Orders Processed: {results['orders']:,}")
+    print(f"  Successfully Delivered: {results['matched_orders']:,}")
+    print(f"  Success Rate: {success_rate:.1%}")
+    print(f"⏱   Execution Time: {execution_time:.1f} seconds")
     
-    print("\n💰 FINANCIAL SUMMARY")
+    print("\n  FINANCIAL SUMMARY")
     print("-" * 50)
     print(f"💵 Total Revenue: Rs {total_revenue:,.0f}")
-    print(f"🏢 Platform Profit: Rs {platform_profit:,.0f}")
-    print(f"📊 Average Delivery Cost: Rs {avg_delivery_cost:.0f}")
+    print(f"  Platform Profit: Rs {platform_profit:,.0f}")
+    print(f"  Average Delivery Cost: Rs {avg_delivery_cost:.0f}")
     
-    print("\n🎯 REAL DATA TARGETS (From Survey)")
+    print("\n  REAL DATA TARGETS (From Survey)")
     print("-" * 50)
     print(f"😊 Customer Satisfaction: {REAL_CUSTOMER_DATA['customer_satisfaction_rate']:.1%}")
-    print(f"⭐ NPS Score: {REAL_CUSTOMER_DATA['nps_score']:.1f} (out of 100, scale: -100 to +100)")
+    print(f"  NPS Score: {REAL_CUSTOMER_DATA['nps_score']:.1f} (out of 100, scale: -100 to +100)")
     print(f"🔄 Reorder Likelihood: {REAL_CUSTOMER_DATA['retention_metrics']['reorder_likelihood']:.1%}")
     print(f"📞 Recommendation Rate: {REAL_CUSTOMER_DATA['retention_metrics']['service_recommendation']:.1%}")
     
-    print("\n🚚 OPERATIONAL DATA (From Metro Excel)")
+    print("\n  OPERATIONAL DATA (From Metro Excel)")
     print("-" * 50)
-    print(f"🏪 Metro Stores: {len(REAL_METRO_STORES)} locations")
+    print(f"  Metro Stores: {len(REAL_METRO_STORES)} locations")
     print(f"🚌 Bus Stops: {len(REAL_METRO_BUS_STOPS)} Metro stops")
     print(f"📍 Delivery Areas: {len(REAL_DELIVERY_AREAS)} neighborhoods")
-    print(f"📦 Daily Orders: {REAL_METRO_OPERATIONAL_DATA['daily_operations']['avg_daily_orders']:,}")
-    print(f"💰 Delivery Charges: Rs {REAL_METRO_OPERATIONAL_DATA['daily_operations']['delivery_charges'][0]}-{REAL_METRO_OPERATIONAL_DATA['daily_operations']['delivery_charges'][1]}")
+    print(f"  Daily Orders: {REAL_METRO_OPERATIONAL_DATA['daily_operations']['avg_daily_orders']:,}")
+    print(f"  Delivery Charges: Rs {REAL_METRO_OPERATIONAL_DATA['daily_operations']['delivery_charges'][0]}-{REAL_METRO_OPERATIONAL_DATA['daily_operations']['delivery_charges'][1]}")
     print(f"🆓 Free Delivery Above: Rs {REAL_METRO_OPERATIONAL_DATA['daily_operations']['free_delivery_threshold']:,}")
     
     print("\n👥 CUSTOMER PREFERENCES (From 131 Survey Responses)")
     print("-" * 50)
     print(f"⚡ Same-day Delivery: {REAL_CUSTOMER_DATA['delivery_preferences']['same_day_preference']:.1%} prefer")
     print(f"💎 Express Willingness: {REAL_CUSTOMER_DATA['delivery_preferences']['express_delivery_willingness']:.1%} willing to pay extra")
-    print(f"📦 Open-box Delivery: {REAL_CUSTOMER_DATA['delivery_preferences']['open_box_importance']:.1%} find important")
+    print(f"  Open-box Delivery: {REAL_CUSTOMER_DATA['delivery_preferences']['open_box_importance']:.1%} find important")
     print(f"🔄 Return Policy: {REAL_CUSTOMER_DATA['delivery_preferences']['return_policy_influence']:.1%} influenced by returns")
     
     print("\n🛒 ORDER BEHAVIOR (From Survey)")
     print("-" * 50)
     print(f"🍕 Food Orders: {REAL_CUSTOMER_DATA['order_behavior']['food_orders']:.1%}")
     print(f"📱 Non-food Orders: {REAL_CUSTOMER_DATA['order_behavior']['non_food_orders']:.1%}")
-    print(f"🛍️  Mixed Orders: {REAL_CUSTOMER_DATA['order_behavior']['mixed_orders']:.1%}")
+    print(f"🛍   Mixed Orders: {REAL_CUSTOMER_DATA['order_behavior']['mixed_orders']:.1%}")
     
-    print("\n📈 PERFORMANCE ANALYSIS")
+    print("\n  PERFORMANCE ANALYSIS")
     print("-" * 50)
     if success_rate > 0.3:
-        print("✅ EXCELLENT: High success rate indicates strong feasibility!")
+        print("  EXCELLENT: High success rate indicates strong feasibility!")
     elif success_rate > 0.25:
-        print("✅ GOOD: Moderate success rate shows potential")
+        print("  GOOD: Moderate success rate shows potential")
     elif success_rate > 0.2:
-        print("✅ FAIR: Success rate shows room for improvement")
+        print("  FAIR: Success rate shows room for improvement")
     else:
-        print("⚠️  NEEDS IMPROVEMENT: Low success rate requires optimization")
+        print("⚠   NEEDS IMPROVEMENT: Low success rate requires optimization")
     
-    print(f"\n🎯 KEY INSIGHTS")
+    print(f"\n  KEY INSIGHTS")
     print("-" * 50)
     print(f"• Using real data from {REAL_CUSTOMER_DATA['total_responses']} customer surveys")
     print(f"• Metro operational data from actual Excel files")
@@ -683,24 +683,24 @@ def run_clean_comprehensive_simulation():
     print(f"• Current simulation success: {success_rate:.1%}")
     
     print("\n" + "=" * 80)
-    print("🎉 SIMULATION COMPLETE - All data integrated successfully!")
+    print("  SIMULATION COMPLETE - All data integrated successfully!")
     print("=" * 80)
 
 def run_clean_basic_simulation():
     """Clean, simple basic simulation."""
     print("\n" + "=" * 60)
-    print("🚚 BASIC CARGO HITCHHIKING SIMULATION")
+    print("  BASIC CARGO HITCHHIKING SIMULATION")
     print("=" * 60)
     
     # Run basic simulation
     results, bus_config, cash_config = run_metro_main_simulation()
     
-    print("\n📊 BASIC RESULTS")
+    print("\n  BASIC RESULTS")
     print("-" * 40)
-    print(f"📦 Total Orders: {results['orders']:,}")
-    print(f"✅ Delivered: {results['matched_orders']:,}")
+    print(f"  Total Orders: {results['orders']:,}")
+    print(f"  Delivered: {results['matched_orders']:,}")
     success_rate = results['matched_orders'] / results['orders'] if results['orders'] > 0 else 0
-    print(f"📈 Success Rate: {success_rate:.1%}")
+    print(f"  Success Rate: {success_rate:.1%}")
     
     # Get KPI data safely - handle both string and dict formats
     kpi_data = results.get('kpi_summary', {})
@@ -716,17 +716,17 @@ def run_clean_basic_simulation():
         total_revenue = kpi_data.get('total_revenue', 0)
         platform_profit = kpi_data.get('platform_profit', 0)
     
-    print(f"💰 Revenue: Rs {total_revenue:,.0f}")
-    print(f"🏢 Profit: Rs {platform_profit:,.0f}")
+    print(f"  Revenue: Rs {total_revenue:,.0f}")
+    print(f"  Profit: Rs {platform_profit:,.0f}")
     
     print("\n" + "=" * 60)
-    print("✅ Basic simulation complete!")
+    print("  Basic simulation complete!")
     print("=" * 60)
 
 def run_clean_advanced_analysis():
     """Clean advanced analysis with comparisons."""
     print("\n" + "=" * 60)
-    print("🔍 ADVANCED ANALYSIS")
+    print("  ADVANCED ANALYSIS")
     print("=" * 60)
     
     print("Running scenario comparisons...")
@@ -740,7 +740,7 @@ def run_clean_advanced_analysis():
     run_hitchhiking_vs_traditional_comparison()
     
     print("\n" + "=" * 60)
-    print("✅ Advanced analysis complete!")
+    print("  Advanced analysis complete!")
     print("=" * 60)
 
 def generate_shipping_details(results, simulation):
@@ -934,20 +934,20 @@ def run_hitchhiking_vs_traditional_comparison():
     print("\nBUSINESS INSIGHTS:")
     print("-" * 30)
     if cost_savings > 0:
-        print("   ✅ Hitchhiking is MORE COST-EFFECTIVE than traditional delivery")
+        print("     Hitchhiking is MORE COST-EFFECTIVE than traditional delivery")
     else:
-        print("   ❌ Traditional delivery is more cost-effective")
+        print("   ✗ Traditional delivery is more cost-effective")
     
     if emission_reduction > 0:
-        print("   ✅ Hitchhiking is MORE ENVIRONMENTALLY FRIENDLY")
+        print("     Hitchhiking is MORE ENVIRONMENTALLY FRIENDLY")
     else:
-        print("   ❌ Traditional delivery is more environmentally friendly")
+        print("   ✗ Traditional delivery is more environmentally friendly")
     
     if hitchhiking_success_rate < TRADITIONAL_DELIVERY_CONFIG['success_rate']*100:
-        print("   ⚠️ Traditional delivery has HIGHER SUCCESS RATE")
-        print("   💡 Hitchhiking success rate limited by constraints (time windows, capacity)")
+        print("   ⚠  Traditional delivery has HIGHER SUCCESS RATE")
+        print("     Hitchhiking success rate limited by constraints (time windows, capacity)")
     else:
-        print("   ✅ Hitchhiking has higher success rate")
+        print("     Hitchhiking has higher success rate")
     
     print("\nIMPORTANT NOTES:")
     print("-" * 30)
@@ -1056,7 +1056,7 @@ def run_metro_scenario_comparison():
     best_scenario = results_list[0]
     worst_scenario = results_list[-1]
     
-    print(f"🏆 Best Performing: {best_scenario['scenario_name']}")
+    print(f"  Best Performing: {best_scenario['scenario_name']}")
     print(f"   Success Rate: {(best_scenario['matched_orders'] / best_scenario['orders']) * 100:.1f}%")
     print(f"   Strategy: {best_scenario['config']['max_detour']}km detour, {best_scenario['config']['price_mult']}x pricing")
     
@@ -1070,10 +1070,10 @@ def run_metro_scenario_comparison():
     improvement = best_rate - worst_rate
     
     if improvement > 0:
-        print(f"\n📈 Performance Improvement: {improvement:.1f} percentage points")
+        print(f"\n  Performance Improvement: {improvement:.1f} percentage points")
         print(f"   The best strategy outperforms the worst by {improvement:.1f}%")
     else:
-        print(f"\n⚠️  All strategies perform similarly")
+        print(f"\n⚠   All strategies perform similarly")
         print(f"   Consider other factors like driver availability or time windows")
     
     return results_list
@@ -1165,20 +1165,20 @@ def run_hitchhiking_vs_traditional_comparison():
     print("\nBUSINESS INSIGHTS:")
     print("-" * 30)
     if cost_savings > 0:
-        print("   ✅ Hitchhiking is MORE COST-EFFECTIVE than traditional delivery")
+        print("     Hitchhiking is MORE COST-EFFECTIVE than traditional delivery")
     else:
-        print("   ❌ Traditional delivery is more cost-effective")
+        print("   ✗ Traditional delivery is more cost-effective")
     
     if emission_reduction > 0:
-        print("   ✅ Hitchhiking is MORE ENVIRONMENTALLY FRIENDLY")
+        print("     Hitchhiking is MORE ENVIRONMENTALLY FRIENDLY")
     else:
-        print("   ❌ Traditional delivery is more environmentally friendly")
+        print("   ✗ Traditional delivery is more environmentally friendly")
     
     if hitchhiking_success_rate < TRADITIONAL_DELIVERY_CONFIG['success_rate']*100:
-        print("   ⚠️ Traditional delivery has HIGHER SUCCESS RATE")
-        print("   💡 Hitchhiking success rate limited by constraints (time windows, capacity)")
+        print("   ⚠  Traditional delivery has HIGHER SUCCESS RATE")
+        print("     Hitchhiking success rate limited by constraints (time windows, capacity)")
     else:
-        print("   ✅ Hitchhiking has higher success rate")
+        print("     Hitchhiking has higher success rate")
     
     print("\nIMPORTANT NOTES:")
     print("-" * 30)
@@ -1243,7 +1243,7 @@ def run_hybrid_metro_yango_simulation():
     print(f"   • Coverage Radius: {YANGO_CONFIG['coverage_radius']}km")
     print(f"   • Time Slots: {len(YANGO_CONFIG['delivery_time_slots'])} available")
     
-    print(f"\n📦 DELIVERY OPTIONS:")
+    print(f"\n  DELIVERY OPTIONS:")
     for option in YANGO_CONFIG['delivery_options']:
         print(f"   • {option}")
     
@@ -1269,7 +1269,7 @@ def run_hybrid_metro_yango_simulation():
         'delivery_areas': REAL_DELIVERY_AREAS
     }
     
-    print(f"\n🚚 HYBRID SIMULATION PARAMETERS:")
+    print(f"\n  HYBRID SIMULATION PARAMETERS:")
     print(f"   • Total Orders: {hybrid_config['total_orders']}")
     print(f"   • Metro Drivers: {hybrid_config['metro_drivers']}")
     print(f"   • Yango Drivers: {hybrid_config['yango_drivers']}")
@@ -1290,7 +1290,7 @@ def run_hybrid_metro_yango_simulation():
     success_rate = results['matched_orders'] / results['orders'] if results['orders'] > 0 else 0
     execution_time = end_time - start_time
     
-    print(f"\n📊 HYBRID SIMULATION RESULTS")
+    print(f"\n  HYBRID SIMULATION RESULTS")
     print("-" * 50)
     print(f"Total Orders: {results['orders']}")
     print(f"Successfully Delivered: {results['matched_orders']}")

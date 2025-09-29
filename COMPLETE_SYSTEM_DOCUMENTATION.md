@@ -5,7 +5,7 @@ This document provides a comprehensive overview of the entire cargo simulation s
 
 ---
 
-## 📁 **File Structure with Detailed Comments**
+##   **File Structure with Detailed Comments**
 
 ### **1. main.py - Entry Point**
 - **Purpose**: Main entry point and orchestration
@@ -98,7 +98,7 @@ This document provides a comprehensive overview of the entire cargo simulation s
 
 ---
 
-## 🎯 **Key Execution Points**
+##   **Key Execution Points**
 
 ### **1. Configuration First**
 - `sim/config.py` loads all data before anything else
@@ -132,7 +132,7 @@ This document provides a comprehensive overview of the entire cargo simulation s
 
 ---
 
-## 📊 **System Architecture Summary**
+##   **System Architecture Summary**
 
 ```
 main.py (Entry Point)
@@ -151,7 +151,7 @@ main.py (Entry Point)
 
 ---
 
-## 🔧 **Technical Implementation Details**
+##   **Technical Implementation Details**
 
 ### **Data Flow**
 1. **Configuration** → Real data loaded from Excel files and surveys
@@ -176,7 +176,7 @@ main.py (Entry Point)
 
 ---
 
-## 📈 **Business Intelligence Features**
+##   **Business Intelligence Features**
 
 ### **Performance Metrics**
 - Order success rate and delivery times
@@ -198,7 +198,7 @@ main.py (Entry Point)
 
 ---
 
-## 🚀 **Usage Instructions**
+##   **Usage Instructions**
 
 ### **Running the Simulation**
 ```bash
@@ -219,7 +219,7 @@ python main.py
 
 ---
 
-## 📋 **File Comments Summary**
+##   **File Comments Summary**
 
 Every Python file now contains:
 - **Purpose**: What the file does
@@ -231,7 +231,7 @@ Every Python file now contains:
 
 ---
 
-## 🎯 **Conclusion**
+##   **Conclusion**
 
 This cargo simulation system is a **sophisticated, event-driven Python application** that models the feasibility of using Metro Orange Line buses for cargo delivery in Islamabad/Rawalpindi. It combines real operational data from Metro Cash & Carry with customer survey insights to provide comprehensive business analysis through advanced matching algorithms, hybrid delivery models, and real-time KPI tracking.
 

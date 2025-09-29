@@ -1,17 +1,17 @@
-# 📦 Installation Guide for Cargo Hitchhiking Simulation
+#   Installation Guide for Cargo Hitchhiking Simulation
 
-## 🎯 **What You Need**
+##   **What You Need**
 
 ### **Required Software:**
 - **Python 3.7 or higher** (the programming language)
 - **Git** (to download the project) - optional
 
 ### **Operating System:**
-- ✅ **Windows 10/11**
-- ✅ **macOS 10.14 or higher**
-- ✅ **Linux (Ubuntu 18.04 or higher)**
+-   **Windows 10/11**
+-   **macOS 10.14 or higher**
+-   **Linux (Ubuntu 18.04 or higher)**
 
-## 🚀 **Step-by-Step Installation**
+##   **Step-by-Step Installation**
 
 ### **Step 1: Install Python**
 
@@ -89,7 +89,7 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
-## 🔧 **Troubleshooting**
+##   **Troubleshooting**
 
 ### **"python3 not found"**
 - Try: `python main.py` instead of `python3 main.py`
@@ -113,7 +113,7 @@ chmod +x venv/bin/activate
 python -m pip install --upgrade pip
 ```
 
-## 📋 **Quick Test**
+##   **Quick Test**
 
 After installation, run this to test everything:
 
@@ -129,7 +129,7 @@ python3 main.py
 # Choose option 1 when prompted
 ```
 
-## 🎉 **Success!**
+##   **Success!**
 
 If you see the Metro simulation running with results in Pakistani Rupees, everything is working correctly!
 
@@ -142,7 +142,7 @@ If you encounter issues:
 3. **Check if virtual environment is active**: You should see `(venv)` at the start of your command line
 4. **Try running with `python` instead of `python3`**
 
-## 📁 **Project Structure**
+##   **Project Structure**
 
 After installation, your folder should look like this:
 ```
@@ -157,4 +157,4 @@ cargo/
 
 ---
 
-**Ready to run your Metro cargo delivery simulation!** 🚛✨
+**Ready to run your Metro cargo delivery simulation!**   

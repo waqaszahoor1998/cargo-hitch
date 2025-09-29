@@ -68,7 +68,7 @@ class MILPOptimizer:
         self.solver_available = self._check_solver_availability()
         
         if not self.solver_available:
-            print("❌ No MILP solver available. Install PuLP: pip install pulp")
+            print("✗ No MILP solver available. Install PuLP: pip install pulp")
     
     def _check_solver_availability(self) -> bool:
         """Check which solvers are available."""
@@ -93,7 +93,7 @@ class MILPOptimizer:
             Dictionary mapping order_id to driver_id
         """
         if not self.solver_available:
-            print("❌ No MILP solver available")
+            print("✗ No MILP solver available")
             return {}
         
         if PULP_AVAILABLE:
@@ -111,7 +111,7 @@ class MILPOptimizer:
         if not PULP_AVAILABLE:
             return {}
         
-        print("🔧 Solving with PuLP MILP solver...")
+        print("  Solving with PuLP MILP solver...")
         
         # Create optimization problem
         prob = pulp.LpProblem("Cargo_Hitchhiking_Optimization", pulp.LpMaximize)
@@ -201,7 +201,7 @@ class MILPOptimizer:
             prob.solve(pulp.PULP_CBC_CMD(timeLimit=self.config.time_limit))
             
             if prob.status == pulp.LpStatusOptimal:
-                print(f"✅ Optimal solution found! Objective value: {pulp.value(prob.objective):.2f}")
+                print(f"  Optimal solution found! Objective value: {pulp.value(prob.objective):.2f}")
                 
                 # Extract solution
                 assignment = {}
@@ -212,11 +212,11 @@ class MILPOptimizer:
                 
                 return assignment
             else:
-                print(f"⚠️  Solution status: {pulp.LpStatus[prob.status]}")
+                print(f"⚠   Solution status: {pulp.LpStatus[prob.status]}")
                 return {}
                 
         except Exception as e:
-            print(f"❌ Error solving MILP: {e}")
+            print(f"✗ Error solving MILP: {e}")
             return {}
     
     def _solve_with_gurobi(self, orders: Dict[str, Order], 
@@ -225,7 +225,7 @@ class MILPOptimizer:
         if not GUROBI_AVAILABLE:
             return {}
         
-        print("🔧 Solving with Gurobi MILP solver...")
+        print("  Solving with Gurobi MILP solver...")
         # Implementation would go here
         # Gurobi is commercial software requiring a license
         return {}
@@ -236,7 +236,7 @@ class MILPOptimizer:
         if not CVXPY_AVAILABLE:
             return {}
         
-        print("🔧 Solving with CVXPY MILP solver...")
+        print("  Solving with CVXPY MILP solver...")
         # Implementation would go here
         # CVXPY is good for academic use but may have limitations
         return {}
@@ -330,7 +330,7 @@ class BundleOptimizer:
         if not self.milp_optimizer.solver_available:
             return []
         
-        print("🎯 Optimizing order bundles with MILP...")
+        print("  Optimizing order bundles with MILP...")
         
         # Create bundles using clustering first
         bundles = self._create_initial_bundles(orders)
@@ -382,22 +382,22 @@ def run_milp_optimization_example():
     optimizer = MILPOptimizer(config)
     
     if optimizer.solver_available:
-        print("✅ MILP solver available")
-        print(f"   - PuLP: {'✅' if PULP_AVAILABLE else '❌'}")
-        print(f"   - Gurobi: {'✅' if GUROBI_AVAILABLE else '❌'}")
-        print(f"   - CVXPY: {'✅' if CVXPY_AVAILABLE else '❌'}")
+        print("  MILP solver available")
+        print(f"   - PuLP: {' ' if PULP_AVAILABLE else '✗'}")
+        print(f"   - Gurobi: {' ' if GUROBI_AVAILABLE else '✗'}")
+        print(f"   - CVXPY: {' ' if CVXPY_AVAILABLE else '✗'}")
         
-        print("\n📊 Optimization Capabilities:")
+        print("\n  Optimization Capabilities:")
         print("   - Optimal order-driver assignment")
         print("   - Multi-objective optimization")
         print("   - Constraint handling")
         print("   - Bundle optimization")
         
     else:
-        print("❌ No MILP solver available")
-        print("💡 Install PuLP: pip install pulp")
+        print("✗ No MILP solver available")
+        print("  Install PuLP: pip install pulp")
     
-    print("\n🎯 MILP vs Other Algorithms:")
+    print("\n  MILP vs Other Algorithms:")
     print("   - Greedy: Fast, but may not be optimal")
     print("   - Network Flow: Good for matching, limited constraints")
     print("   - MILP: Optimal solution, handles all constraints")

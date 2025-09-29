@@ -410,7 +410,7 @@ class CargoHitchhikingSimulation:
                 # Regenerate drivers with new supply
                 self._regenerate_drivers_with_supply(config.supply_multiplier)
             
-            print(f"✅ Applied scenario configuration: {config.name}")
+            print(f"  Applied scenario configuration: {config.name}")
             print(f"   - Base price multiplier: {getattr(config, 'base_price_multiplier', 1.0)}")
             print(f"   - Base wage multiplier: {getattr(config, 'base_wage_multiplier', 1.0)}")
             print(f"   - Max detour: {getattr(config, 'max_detour_km', 'default')} km")

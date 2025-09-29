@@ -528,7 +528,7 @@ def run_network_optimization_example():
         network.add_edge(edge)
     
     # Test shortest path
-    print("🔍 Finding shortest paths from node E...")
+    print("  Finding shortest paths from node E...")
     shortest_paths = network.find_shortest_paths("E")
     
     for node_id, (distance, path) in shortest_paths.items():
@@ -536,7 +536,7 @@ def run_network_optimization_example():
             print(f"  {node_id}: {distance:.2f} km via {' -> '.join(path)}")
     
     # Test clustering
-    print("\n🎯 Testing clustering algorithms...")
+    print("\n  Testing clustering algorithms...")
     clustering = ClusteringAlgorithm(network)
     
     node_ids = ["A", "B", "C", "D"]
@@ -546,7 +546,7 @@ def run_network_optimization_example():
     print(f"  K-means clusters (k=2): {k_means_clusters}")
     print(f"  Hierarchical clusters (threshold=2.0): {hierarchical_clusters}")
     
-    print("\n✅ Network optimization example completed!")
+    print("\n  Network optimization example completed!")
 
 
 if __name__ == "__main__":

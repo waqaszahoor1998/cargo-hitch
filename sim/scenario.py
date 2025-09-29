@@ -166,7 +166,7 @@ class ScenarioManager:
     
     def run_scenario(self, config: ScenarioConfig) -> ScenarioResult:
         """Run a single simulation scenario."""
-        print(f"\n🚀 Running scenario: {config.name}")
+        print(f"\n  Running scenario: {config.name}")
         print(f"📝 Description: {config.description}")
         
         # Create simulation with scenario config
@@ -191,7 +191,7 @@ class ScenarioManager:
         
         self.results.append(scenario_result)
         
-        print(f"✅ Scenario '{config.name}' completed in {execution_time:.2f} seconds")
+        print(f"  Scenario '{config.name}' completed in {execution_time:.2f} seconds")
         return scenario_result
     
     def run_all_scenarios(self) -> List[ScenarioResult]:
@@ -210,7 +210,7 @@ class ScenarioManager:
                 result = self.run_scenario(config)
                 results.append(result)
             except Exception as e:
-                print(f"❌ Error running scenario '{config.name}': {e}")
+                print(f"✗ Error running scenario '{config.name}': {e}")
         
         return results
     
@@ -275,7 +275,7 @@ class ScenarioManager:
         with open(output_file, 'w') as f:
             f.write(html_content)
         
-        print(f"📊 Scenario comparison report saved to: {output_file}")
+        print(f"  Scenario comparison report saved to: {output_file}")
     
     def _generate_html_report(self, profit_df, delivery_df, cost_df) -> str:
         """Generate HTML content for the comparison report."""
@@ -298,7 +298,7 @@ class ScenarioManager:
         </head>
         <body>
             <div class="header">
-                <h1>🚛 Cargo Hitchhiking Simulation</h1>
+                <h1>  Cargo Hitchhiking Simulation</h1>
                 <h2>Scenario Comparison Report</h2>
                 <p>Generated on: """ + datetime.now().strftime("%Y-%m-%d %H:%M:%S") + """</p>
             </div>
@@ -307,7 +307,7 @@ class ScenarioManager:
         # Add profit comparison
         html += f"""
             <div class="metric-section">
-                <div class="metric-title">💰 Platform Profit Comparison</div>
+                <div class="metric-title">  Platform Profit Comparison</div>
                 {profit_df.to_html(classes='table', index=False)}
             </div>
         """
@@ -315,7 +315,7 @@ class ScenarioManager:
         # Add delivery rate comparison
         html += f"""
             <div class="metric-section">
-                <div class="metric-title">📦 On-Time Delivery Rate Comparison</div>
+                <div class="metric-title">  On-Time Delivery Rate Comparison</div>
                 {delivery_df.to_html(classes='table', index=False)}
             </div>
         """
@@ -371,9 +371,9 @@ class ScenarioManager:
             print(f"📂 Loaded {len(self.results)} scenario results from: {filename}")
             
         except FileNotFoundError:
-            print(f"❌ Results file not found: {filename}")
+            print(f"✗ Results file not found: {filename}")
         except Exception as e:
-            print(f"❌ Error loading results: {e}")
+            print(f"✗ Error loading results: {e}")
 
 
 def run_scenario_comparison():
@@ -393,8 +393,8 @@ def run_scenario_comparison():
     # Save results
     manager.save_results()
     
-    print("\n🎯 Scenario comparison completed!")
-    print(f"📊 {len(results)} scenarios analyzed")
+    print("\n  Scenario comparison completed!")
+    print(f"  {len(results)} scenarios analyzed")
     
     return manager
 

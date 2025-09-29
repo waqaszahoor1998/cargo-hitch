@@ -291,7 +291,7 @@ class KPITracker:
         """Get comprehensive KPI summary as string."""
         return f"""
 === COMPREHENSIVE KPI SUMMARY ===
-📦 ORDER METRICS:
+  ORDER METRICS:
    Total Orders: {self.metrics.total_orders}
    Matched Orders: {self.metrics.matched_orders} ({self.metrics.match_rate:.1%})
    Delivered Orders: {self.metrics.delivered_orders}
@@ -303,13 +303,13 @@ class KPITracker:
    Active Drivers: {self.metrics.active_drivers}
    Avg Earnings/Hour: ${self.metrics.avg_driver_earnings_per_hour:.2f}
 
-📊 PERFORMANCE METRICS:
+  PERFORMANCE METRICS:
    On-Time Delivery: {self.metrics.on_time_delivery_rate:.1%}
    Avg Delivery Cost: ${self.metrics.avg_delivery_cost:.2f}
    Avg Delivery Time: {self.metrics.avg_delivery_time:.2f} hours
    Avg Detour: {self.metrics.avg_detour_distance:.2f} km
 
-💰 FINANCIAL METRICS:
+  FINANCIAL METRICS:
    Total Revenue: ${self.metrics.total_revenue:.2f}
    Platform Profit: ${self.metrics.total_platform_profit:.2f}
    Profit Margin: {self.metrics.profit_margin:.1%}
@@ -318,7 +318,7 @@ class KPITracker:
    Total Emissions: {self.metrics.total_emissions_kg:.2f} kg CO2
    Avg Emissions/Order: {self.metrics.avg_emissions_per_order:.2f} kg CO2
 
-🚛 FLEET METRICS:
+  FLEET METRICS:
    Fleet Usage: {self.metrics.fleet_usage_count}
    Fleet Cost: ${self.metrics.fleet_cost:.2f}
 """

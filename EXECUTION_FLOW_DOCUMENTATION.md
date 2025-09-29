@@ -5,7 +5,7 @@ This document provides a comprehensive, chronological breakdown of how the cargo
 
 ---
 
-## 🚀 **Phase 1: Import Phase (Immediate Execution)**
+##   **Phase 1: Import Phase (Immediate Execution)**
 
 When you run `python main.py`, Python immediately executes the import statements in this exact order:
 
@@ -100,7 +100,7 @@ from .config import KPI_TARGETS  # ← TRIGGERS sim/config.py (already loaded)
 
 ---
 
-## 🎯 **Phase 2: Execution Phase (When main() runs)**
+##   **Phase 2: Execution Phase (When main() runs)**
 
 After all imports are complete, Python executes the main program:
 
@@ -549,7 +549,7 @@ During the simulation, this loop repeats every 15 minutes (TICK_INTERVAL_MINUTES
 
 ---
 
-## 📊 **Complete File Execution Summary**
+##   **Complete File Execution Summary**
 
 ### **Import Phase (9 files loaded immediately):**
 1. `main.py` (entry point)
@@ -582,7 +582,7 @@ During the simulation, this loop repeats every 15 minutes (TICK_INTERVAL_MINUTES
 
 ---
 
-## 🎯 **Key Execution Points**
+##   **Key Execution Points**
 
 1. **Configuration First**: `sim/config.py` loads all data before anything else
 2. **Entities Foundation**: `sim/entities.py` defines base classes used everywhere

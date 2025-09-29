@@ -1,8 +1,8 @@
-# 🚛 Cargo Hitchhiking Simulation System
+#   Cargo Hitchhiking Simulation System
 
 A comprehensive simulation system for Metro bus cargo delivery operations in Islamabad/Rawalpindi, Pakistan. This system models the feasibility of using Metro Orange Line buses for cargo delivery from Metro Cash & Carry stores to customers, comparing performance against traditional delivery methods.
 
-## 📋 Table of Contents
+##   Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
@@ -19,7 +19,7 @@ A comprehensive simulation system for Metro bus cargo delivery operations in Isl
 - [Troubleshooting](#troubleshooting)
 - [Development](#development)
 
-## 🎯 Overview
+##   Overview
 
 The Cargo Hitchhiking Simulation System is a sophisticated event-driven simulation that models how Metro Orange Line buses can be used to deliver packages from Metro Cash & Carry stores to customers in Islamabad and Rawalpindi. The system integrates real operational data, customer survey insights, and geographical information to provide accurate feasibility analysis.
 
@@ -31,7 +31,7 @@ The Cargo Hitchhiking Simulation System is a sophisticated event-driven simulati
 - **Operational Optimization**: Optimize order-driver matching and route planning
 - **Business Viability**: Analyze revenue potential and profit margins
 
-## ✨ Key Features
+##   Key Features
 
 ### 🔄 **Real Data Integration**
 - **Metro Cash & Carry Operations**: Real order volumes, pricing, and delivery parameters from Excel files
@@ -45,19 +45,19 @@ The Cargo Hitchhiking Simulation System is a sophisticated event-driven simulati
 - **Shahzore Trucks**: 5 trucks for large deliveries during business hours
 - **Flexible Pickup Options**: Direct store pickup or bus stop pickup models
 
-### 📊 **Advanced Analytics**
+###   **Advanced Analytics**
 - **KPI Tracking**: Success rates, revenue, costs, and environmental impact
 - **Performance Metrics**: Delivery times, detour distances, and capacity utilization
 - **Financial Analysis**: Revenue, profit margins, and cost comparisons in Pakistani Rupees
 - **Scenario Comparison**: Multiple business scenarios and optimization strategies
 
-### 🎮 **Interactive Interface**
+###   **Interactive Interface**
 - **Menu-Driven System**: Easy-to-use command-line interface
 - **Multiple Output Options**: Detailed reports, financial analysis, and performance insights
 - **Real-Time Results**: Live simulation progress and results display
 - **Comprehensive Reporting**: Professional reports with Pakistani Rupee formatting
 
-## 🏗️ System Architecture
+##    System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -102,7 +102,7 @@ The Cargo Hitchhiking Simulation System is a sophisticated event-driven simulati
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## 📊 Data Sources
+##   Data Sources
 
 ### Real Metro Cash & Carry Data
 - **Daily Orders**: 280-300 orders per day
@@ -126,7 +126,7 @@ The Cargo Hitchhiking Simulation System is a sophisticated event-driven simulati
 - **Delivery Areas**: 14 real neighborhoods in Islamabad/Rawalpindi
 - **Service Coverage**: 123 areas across both cities
 
-## 🚀 Installation
+##   Installation
 
 ### Prerequisites
 - **Python 3.7+**
@@ -164,7 +164,7 @@ The Cargo Hitchhiking Simulation System is a sophisticated event-driven simulati
    python3 main.py
    ```
 
-## 🎮 Usage
+##   Usage
 
 ### Basic Usage
 
@@ -221,7 +221,7 @@ Scenarios tested:
 - **Efficient Metro**: Less detour, lower prices
 - **Premium Metro**: More detour, much higher prices
 
-## 🔧 System Components
+##   System Components
 
 ### Core Simulation Engine (`sim/engine.py`)
 
@@ -347,7 +347,7 @@ The system generates realistic orders based on Metro Cash & Carry data:
 - **Capacity**: Large deliveries only
 - **Rating**: 4.0/5.0
 
-## 🔍 Matching Algorithms
+##   Matching Algorithms
 
 ### Greedy Matching (`sim/matcher/greedy.py`)
 
@@ -396,7 +396,7 @@ def greedy_matching_single(orders, drivers, current_time):
 4. **Driver Preference**: Prioritize high-rated drivers
 5. **Area Grouping**: Group orders by delivery areas
 
-## 📈 Performance Metrics
+##   Performance Metrics
 
 ### KPI Tracking (`sim/kpi.py`)
 
@@ -446,7 +446,7 @@ def update_metrics(self, orders, drivers, fleets):
     self._update_environmental_metrics(orders, drivers)
 ```
 
-## ⚙️ Configuration
+##    Configuration
 
 ### Simulation Parameters
 
@@ -520,61 +520,61 @@ config = {
 }
 ```
 
-## 📊 Results & Analysis
+##   Results & Analysis
 
 ### Sample Output
 
 ```
-🌟 CARGO HITCHHIKING SIMULATION - COMPREHENSIVE RESULTS
+  CARGO HITCHHIKING SIMULATION - COMPREHENSIVE RESULTS
 ================================================================================
 
-📊 SIMULATION RESULTS
+  SIMULATION RESULTS
 --------------------------------------------------
-📦 Orders Processed: 280
-✅ Successfully Delivered: 49
-📈 Success Rate: 17.5%
-⏱️  Execution Time: 2.1 seconds
+  Orders Processed: 280
+  Successfully Delivered: 49
+  Success Rate: 17.5%
+⏱   Execution Time: 2.1 seconds
 
-💰 FINANCIAL SUMMARY
+  FINANCIAL SUMMARY
 --------------------------------------------------
 💵 Total Revenue: Rs 5,712
-🏢 Platform Profit: Rs 2,285
-📊 Average Delivery Cost: Rs 117
+  Platform Profit: Rs 2,285
+  Average Delivery Cost: Rs 117
 
-🎯 REAL DATA TARGETS (From Survey)
+  REAL DATA TARGETS (From Survey)
 --------------------------------------------------
 😊 Customer Satisfaction: 71.0%
-⭐ NPS Score: 38.5 (out of 100, scale: -100 to +100)
+  NPS Score: 38.5 (out of 100, scale: -100 to +100)
 🔄 Reorder Likelihood: 82.0%
 📞 Recommendation Rate: 75.0%
 
-🚚 OPERATIONAL DATA (From Metro Excel)
+  OPERATIONAL DATA (From Metro Excel)
 --------------------------------------------------
-🏪 Metro Stores: 3 locations
+  Metro Stores: 3 locations
 🚌 Bus Stops: 13 Metro stops
 📍 Delivery Areas: 14 neighborhoods
-📦 Daily Orders: 280
-💰 Delivery Charges: Rs 99-129
+  Daily Orders: 280
+  Delivery Charges: Rs 99-129
 🆓 Free Delivery Above: Rs 3,000
 
 👥 CUSTOMER PREFERENCES (From 131 Survey Responses)
 --------------------------------------------------
 ⚡ Same-day Delivery: 65.0% prefer
 💎 Express Willingness: 45.0% willing to pay extra
-📦 Open-box Delivery: 78.0% find important
+  Open-box Delivery: 78.0% find important
 🔄 Return Policy: 65.0% influenced by returns
 
 🛒 ORDER BEHAVIOR (From Survey)
 --------------------------------------------------
 🍕 Food Orders: 25.0%
 📱 Non-food Orders: 45.0%
-🛍️  Mixed Orders: 30.0%
+🛍   Mixed Orders: 30.0%
 
-📈 PERFORMANCE ANALYSIS
+  PERFORMANCE ANALYSIS
 --------------------------------------------------
-✅ FAIR: Success rate shows room for improvement
+  FAIR: Success rate shows room for improvement
 
-🎯 KEY INSIGHTS
+  KEY INSIGHTS
 --------------------------------------------------
 • Using real data from 131 customer surveys
 • Metro operational data from actual Excel files
@@ -616,7 +616,7 @@ config = {
 | Vehicles Required | 45 | 13+100 | 72% vehicle reduction |
 | Infrastructure | Dedicated fleet | Existing Metro | Leverages existing |
 
-## 🔧 Troubleshooting
+##   Troubleshooting
 
 ### Common Issues
 
@@ -678,7 +678,7 @@ config = {
 }
 ```
 
-## 🛠️ Development
+## 🛠  Development
 
 ### Adding New Features
 
@@ -824,21 +824,21 @@ def test_simulation_run():
 
 ---
 
-## 🎉 Conclusion
+##   Conclusion
 
 The Cargo Hitchhiking Simulation System provides a comprehensive platform for analyzing the feasibility of using Metro buses for cargo delivery in Islamabad/Rawalpindi. With real data integration, advanced matching algorithms, and detailed performance analytics, the system offers valuable insights for business decision-making and operational optimization.
 
 **Key Achievements:**
-- ✅ Real data integration from Metro Cash & Carry and customer surveys
-- ✅ Hybrid delivery system modeling (Metro + Yango + Shahzore)
-- ✅ Advanced matching algorithms with optimization strategies
-- ✅ Comprehensive KPI tracking and performance analysis
-- ✅ Interactive interface with multiple output options
-- ✅ Professional reporting in Pakistani Rupees
-- ✅ Environmental impact assessment
-- ✅ Comparative analysis with traditional delivery methods
+-   Real data integration from Metro Cash & Carry and customer surveys
+-   Hybrid delivery system modeling (Metro + Yango + Shahzore)
+-   Advanced matching algorithms with optimization strategies
+-   Comprehensive KPI tracking and performance analysis
+-   Interactive interface with multiple output options
+-   Professional reporting in Pakistani Rupees
+-   Environmental impact assessment
+-   Comparative analysis with traditional delivery methods
 
-**Ready to run your Metro cargo delivery simulation!** 🚛✨
+**Ready to run your Metro cargo delivery simulation!**   
 
 ---
 

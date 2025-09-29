@@ -78,13 +78,13 @@ class SimpleCargoSimulation:
     
     def run(self) -> Dict:
         """Run the complete simulation."""
-        print("🚀 Starting simulation...")
+        print("  Starting simulation...")
         
         # Generate data
         self._generate_orders(50)  # 50 orders instead of 200
         self._generate_drivers(25)  # 25 drivers instead of 100
         
-        print(f"📦 Generated {len(self.orders)} orders")
+        print(f"  Generated {len(self.orders)} orders")
         print(f"🚗 Generated {len(self.drivers)} drivers")
         
         # Run matching
@@ -121,7 +121,7 @@ class SimpleCargoSimulation:
     
     def _run_matching(self):
         """Simple greedy matching algorithm."""
-        print("🔍 Running matching algorithm...")
+        print("  Running matching algorithm...")
         
         available_drivers = self.drivers.copy()
         
